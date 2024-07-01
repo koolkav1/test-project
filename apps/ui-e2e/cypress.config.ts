@@ -1,5 +1,4 @@
 import { nxE2EPreset } from '@nx/cypress/plugins/cypress-preset';
-
 import { defineConfig } from 'cypress';
 
 export default defineConfig({
@@ -7,11 +6,13 @@ export default defineConfig({
     ...nxE2EPreset(__filename, {
       cypressDir: 'src',
       webServerCommands: {
-        default: 'nx run ui:serve:development',
-        production: 'nx run ui:serve:production',
+        default: 'npm run start',
+        production: 'npm run start',
+        both: 'npm run start'
       },
-      ciWebServerCommand: 'nx run ui:serve-static',
+      ciWebServerCommand: 'npm run start',
     }),
     baseUrl: 'http://localhost:4200',
+    chromeWebSecurity: false,
   },
 });

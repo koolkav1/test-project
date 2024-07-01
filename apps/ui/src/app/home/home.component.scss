@@ -1,0 +1,30 @@
+.home-container {
+  text-align: center;
+  margin-top: 50px;
+
+  h1 {
+    font-size: 2.5em;
+    color: #333;
+  }
+
+  p {
+    font-size: 1.2em;
+    color: #666;
+  }
+
+  .search-link {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1em;
+    color: white;
+    background-color: #007bff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: #0056b3;
+    }
+  }
+}

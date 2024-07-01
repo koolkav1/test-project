@@ -1,0 +1,16 @@
+<div class="autocomplete-page">
+  <h1>Search for Your Favourite City</h1>
+  <div class="autocomplete-container">
+    <input (keyup)="isSelected = false" [formControl]="searchControl" placeholder="Search cities" type="text" />
+    @if (store.items().length && !isSelected) {
+      <ul class="suggestions-list">
+        @for (city of store.items(); track $index) {
+          <li class="suggestions-list-item" (click)="selectSuggestion(city); isSelected = true">
+            {{ city }}
+          </li>
+        }
+
+      </ul>
+    }
+  </div>
+</div>

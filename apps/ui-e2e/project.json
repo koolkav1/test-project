@@ -4,7 +4,7 @@
   "projectType": "application",
   "sourceRoot": "apps/ui-e2e/src",
   "tags": [],
-  "implicitDependencies": ["ui"],
+  "implicitDependencies": ["ui", "api"],
   "// targets": "to see all targets run: nx show project ui-e2e --web",
   "targets": {}
 }
